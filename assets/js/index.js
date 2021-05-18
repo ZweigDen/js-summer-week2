@@ -20,7 +20,9 @@ const app ={
                 <td>${item.title}</td>
                 <td>${item.origin_price}</td>
                 <td>${item.price}</td>
-                <td></td>
+                <td><input class="form-check-input" type="checkbox" id="is_enabled" ${item.is_enabled ? 'checked' : ''} data-action="status" data-id="${item.id}">
+                <label class="form-check-label" for="is_enabled">${item.is_enabled ? '啟用' : '未啟用'}</label>
+              </div></td>
                 <td><button type="button" data-id="${item.id}" class="delBtn">刪除</button></td>
             </tr>
             `
@@ -48,7 +50,7 @@ const app ={
         .then(res=>{
             console.log(res);
         });
-        this.getData();
+        app.getData();
     }
 }
-app.init();
+window.onload=app.init;
