@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,35 +7,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 </head>
 
 <body>
-    <div>
+    <section class="container d-flex flex-column align-items-center adminInput">
+        <div class="mb-3">
+            <label for="inputName">帳號</label>
+            <input type="email" id="inputName">
+        </div>
+        <div class="mb-3">
+            <label for="inputPassword">密碼</label>
+            <input type="password" id="inputpassword">
+        </div>
+        <button type="button" id="loginBtn">登入</button>
+    </section>
+    <section class="container d-flex flex-column align-items-center adminOutput d-none">
+        <h3 class="mb-3">登入成功</h3>
+        <button type="button" id="logoutBtn">登出</button>
+    </section>
+    <section class="container">
         <table class="table mt-4">
             <thead>
-                <tr>
-                    <th>產品名稱</th>
-                    <th width="120">
-                        原價
-                    </th>
-                    <th width="120">
-                        售價
-                    </th>
-                    <th width="150">
-                        是否啟用
-                    </th>
-                    <th width="120">
-                        刪除
-                    </th>
-                </tr>
+              <tr>
+                <th>產品名稱</th>
+                <th width="120">
+                  原價
+                </th>
+                <th width="120">
+                  售價
+                </th>
+                <th width="150">
+                  圖片
+                </th>
+                <th width="120">
+                  刪除
+                </th>
+              </tr>
             </thead>
             <tbody id="productList">
             </tbody>
-        </table>
-    </div>
+          </table>
+    </section>
     <script src="assets/js/all.js"></script>
-    <script src="assets/js/index.js"></script>
 </body>
 
 </html>
